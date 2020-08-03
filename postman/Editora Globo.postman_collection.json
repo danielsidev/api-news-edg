@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "54d16ef4-d12f-472b-ad4a-96df3ef4150f",
+		"name": "Editora Globo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n\n{\n    \"email\":\"admin@editora-globo.com\",\n    \"password\":\"admin123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/access/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"access",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra Notícia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2NDI3MzA0LCJleHAiOjE1OTY0MzA5MDR9.ryaWG3CxJlClCQanQ1_t7nLxDHZbxmtc2ZvJxGhzSRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2MzIwNDc5LCJleHAiOjE1OTYzMjQwNzl9.2AxjEUyKrgyGcl2QUDAoCZIj096VXBNDwZ58gQx2MeY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\":\"Teste de titulo 6\",\n    \"conteudo\":\"Teste de conteudo 6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/news",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Notícia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2MzIwNDc5LCJleHAiOjE1OTYzMjQwNzl9.2AxjEUyKrgyGcl2QUDAoCZIj096VXBNDwZ58gQx2MeY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2MzIwNDc5LCJleHAiOjE1OTYzMjQwNzl9.2AxjEUyKrgyGcl2QUDAoCZIj096VXBNDwZ58gQx2MeY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\":\"Teste de titulo Atualizado Agoraaa\",\n    \"conteudo\":\"Teste de conteudo Atualizado Agoraaa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/news/5f2619f71d6ccf00ac7681df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"news",
+						"5f2619f71d6ccf00ac7681df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna Notícias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2NDI3MzA0LCJleHAiOjE1OTY0MzA5MDR9.ryaWG3CxJlClCQanQ1_t7nLxDHZbxmtc2ZvJxGhzSRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/news",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna Notícia Por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2NDI3MzA0LCJleHAiOjE1OTY0MzA5MDR9.ryaWG3CxJlClCQanQ1_t7nLxDHZbxmtc2ZvJxGhzSRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/news/5f27812f61e034002196fabd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"news",
+						"5f27812f61e034002196fabd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta Notícia Por ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2NDI3MzA0LCJleHAiOjE1OTY0MzA5MDR9.ryaWG3CxJlClCQanQ1_t7nLxDHZbxmtc2ZvJxGhzSRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2MzI0MjIxLCJleHAiOjE1OTYzMjc4MjF9.QScA5Zkn7JHA12Pokb3XPtP81q5HJiTrm6LJtilyV2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/news/5f278c47af0b0200ac675540",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"news",
+						"5f278c47af0b0200ac675540"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2NDIwODAxLCJleHAiOjE1OTY0MjQ0MDF9.jNYG6yL5N664d3p9tGNIQQ2rlRQ22joh0rCMEoAF0J8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNWYyNWMyZGIzNGVlZGIwMDRhNmNlZTExIiwiaWF0IjoxNTk2MzIwNDc5LCJleHAiOjE1OTYzMjQwNzl9.2AxjEUyKrgyGcl2QUDAoCZIj096VXBNDwZ58gQx2MeY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\":\"Teste de titulo 4\",\n    \"conteudo\":\"Teste de conteudo 4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/access/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"access",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
