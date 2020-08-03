@@ -153,8 +153,7 @@ Ao acionar esse endpoint teremos a atualização de uma notícia.
 |Request| PUT|
 |---|---| 
 |Content-Type|application/json| 
-id = 5f2619f71d6ccf00ac7681df (ObjectId do MongoDB)
-|Rota|//api/news/{id}|
+|Rota|/api/news/{id}|
 
 ```
 Exemplo:http://localhost:9000/api/news/5f2619f71d6ccf00ac7681df
@@ -223,8 +222,7 @@ Ao acionar esse endpoint teremos  uma notícia por id.
 |Request| GET|
 |---|---| 
 |Content-Type|application/json| 
-id = 5f2619f71d6ccf00ac7681df (ObjectId do MongoDB)
-|Rota|//api/news/{id}|
+|Rota|/api/news/{id}|
 
 ```
 Exemplo:http://localhost:9000/api/news/5f2619f71d6ccf00ac7681df
@@ -351,8 +349,7 @@ Ao acionar esse endpoint removemos uma notícia por is.
 |Request| DELETE|
 |---|---| 
 |Content-Type|application/json| 
-id = 5f2619f71d6ccf00ac7681df (ObjectId do MongoDB)
-|Rota|//api/news/{id}|
+|Rota|/api/news/{id}|
 
 ```
 Exemplo:http://localhost:9000/api/news/5f278c47af0b0200ac675540
