@@ -10,13 +10,17 @@ Abra um terminal, na raiz do projeto, e instale as dependências.
 $ npm install 
 ```
 #### A API conecta-se a um MongoDB online no https://cloud.mongodb.com/. Abri uma conta free e criei um banco para teste.
-Após instalar as dependências, rode o docker composer
+Após instalar as dependências, rode o docker composer para setar as variáveis de ambiente necessárias.
 ```sh
 $ sudo docker-compose up
 ```
  ---
 # Sobre Autenticação
 Esse serviço  foi feito com autenticação com JWT para todas as rotas. 
+
+ ---
+ # Acessos
+Na raiz do projeto existe um diretório chamado postman. Dentro dele existe uma collection com os exemplos de requisições. Basta importar no postman. O primeiro enndpoit que deve ser sempre acionado é o do login para obter o token e poder adicioná-lo as demais requisições.
 
  ---
  # Rotas da Aplicação
