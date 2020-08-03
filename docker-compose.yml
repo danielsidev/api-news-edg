@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  server:
+    container_name: api_news_globo
+    build: '.'
+    volumes:
+      - ./:/node-app/src/
+      - ./node_modules:/node-app/node_modules
+    environment:
+      NODE_ENV: 'development'
+      DB_USER: 'admin_globo'
+      DB_PASSWORD: 'admin_globo_123'
+      DB_NAME: 'cluster0'
+      DB_HOST: 'cluster0.pmf44.mongodb.net'
+      DB_OPTIONS: 'retryWrites=true&w=majority'
+      APP_SECRET: 'globo_Secret'
+    ports:
+      - '9000:9000'
+
+    restart: always
